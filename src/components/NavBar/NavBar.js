@@ -2,7 +2,7 @@ import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
     return (
-        <nav className='navbar m-3'>
+        <nav className='navbar m-3 columns is-fullwidth'>
             <h3 className='column subtitle is-3'>
             WILDVEST
             </h3>

@@ -1,0 +1,29 @@
+.controles {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.boton-incremento,
+.boton-decremento,
+.boton-agregar {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-incremento:hover,
+.boton-decremento:hover,
+.boton-agregar:hover {
+    background-color: #0056b3;
+}
+
+#cantidad {
+    font-size: 1.5em;
+    margin: 0 10px;
+}
