@@ -2,14 +2,14 @@ import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = ({id, name, img, category, description, price, stock}) => {
     return (
-        <article>
-            <header>
-                <h2>
+        <article className = "card">
+            <header className="card-header">
+                <h2 className="card-header-title">
                     {name}
                 </h2>
             </header>
-            <picture>
-                <img src={img} alt ={name}/>
+            <picture className="card-image">
+                <img src={img} alt={name}/>
             </picture>
             <section>
                 <p>
@@ -22,8 +22,8 @@ const ItemDetail = ({id, name, img, category, description, price, stock}) => {
                     Precio: ${price}
                 </p>
             </section>
-            <footer>
-                <ItemCount initial={1} stock={stock} onAdd={(quantity)=> console.log("agrega")}/>
+            <footer className="card-footer">
+                <ItemCount initial={1} stock={stock} onAdd={ (quantity)=> {console.log("agrega", quantity)} }/>
             </footer>
         </article>
     )
