@@ -1,0 +1,36 @@
+/* Estilo para el contenedor del header */
+.header {
+  background-color: #333; /* Color de fondo del header */
+  padding: 10px 0; /* Espacio de relleno superior e inferior */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+  color: #fff; /* Color de texto en el header */
+  display: flex; /* Utiliza flexbox para la alineación horizontal */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  align-items: center;
+}
+
+/* Estilo para el logo en el navbar */
+.logo {
+  font-size: 24px; /* Tamaño de fuente del logo */
+  font-weight: bold; /* Texto en negrita */
+  color: #fff; /* Color del logo */
+  text-decoration: none; /* Elimina el subrayado del logo si es un enlace */
+}
+
+/* Estilo para los enlaces del navbar */
+.Option {
+  color: #fff; /* Color de texto de los enlaces */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  margin: 0 15px; /* Espacio entre enlaces */
+  font-size: 18px; /* Tamaño de fuente de los enlaces */
+}
+
+/* Estilo para un enlace activo en el navbar */
+.ActiveOption {
+  color: #ff4500; /* Cambia el color al pasar el cursor */
+  text-decoration: underline; /* Subrayado al pasar el cursor */
+  font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilo para el botón o elemento de navegación adicional (CartWidget) */
+/* Asegúrate de aplicar estilos a tu CartWidget según sea necesario */

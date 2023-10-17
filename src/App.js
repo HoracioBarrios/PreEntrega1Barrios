@@ -1,8 +1,10 @@
 import NavBar from './components/NavBar/NavBar';
 import ItemListcontainer from './components/ItemListContainer/ItemListContainer';
-import 'bulma/css/bulma.css';
+//import 'bulma/css/bulma.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './App.css'
 
 function App() {
 
@@ -11,6 +13,7 @@ function App() {
         <div className='App'>
             <BrowserRouter>
             <NavBar/>
+            
             <Routes>
                 <Route path='/' element={<ItemListcontainer/>}/>
                 <Route path='/category/:categoryId' element={<ItemListcontainer/>}/>

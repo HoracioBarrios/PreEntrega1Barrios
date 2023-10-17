@@ -1,31 +1,48 @@
+import { useState } from "react";
 import ItemCount from "../ItemCount/ItemCount";
+import { Link } from 'react-router-dom'
+
 
 const ItemDetail = ({id, name, img, category, description, price, stock}) => {
+        const [quantityAdded, setQuantityAdded] = useState(0);
+
+        const handleOnAdd = (quantity)=>{
+            setQuantityAdded(quantity);
+        }
     return (
-        <article className = "card">
+        <article className="card">
             <header className="card-header">
-                <h2 className="card-header-title">
-                    {name}
+                <h2 className="card-title">
+                    {name} - {id}
                 </h2>
             </header>
-            <picture className="card-image">
+            <picture className="card-img">
                 <img src={img} alt={name}/>
             </picture>
-            <section>
-                <p>
+            <section className="card-body">
+                <p className="card-text">
                     Categoria: {category}
                 </p>
-                <p>
+                <p className="card-text">
                     Descripsion: {description}
                 </p>
-                <p>
+                <p className="card-text">
                     Precio: ${price}
                 </p>
             </section>
             <footer className="card-footer">
-                <ItemCount initial={1} stock={stock} onAdd={ (quantity)=> {console.log("agrega", quantity)} }/>
+                {
+                    quantityAdded > 0 ?(
+                        <Link to='/cart'>Terminar compra</Link>
+                    ) : (
+                        <ItemCount initial={1} sotck={stock} onAdd={handleOnAdd}/>
+                    )
+                }
             </footer>
         </article>
+        
+
+        
     )
 }
 
